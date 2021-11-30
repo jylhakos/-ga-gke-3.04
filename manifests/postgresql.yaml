@@ -19,8 +19,14 @@ spec:
           env:
             - name: POSTGRES_INITDB_ARGS
               value: "-A md5"
+            - name: POSTGRES_HOST_AUTH_METHOD
+              value: trust
+            - name: POSTGRES_PASSWORD
+              value: postgres
             - name: PGDATA
               value: /var/lib/postgresql/data
+            - name: DB_SCHEMA
+              value: postgres
           #envFrom:
           #  - configMapRef:
           #      name: app-db-env
