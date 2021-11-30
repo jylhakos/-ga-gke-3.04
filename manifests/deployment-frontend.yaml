@@ -20,6 +20,6 @@ spec:
                 name: app-db-env
         - name: todo-response-db
           image: PROJECT/IMAGE_FRONTEND
-          envFrom:
-            - configMapRef:
-                name: app-db-env
+          #envFrom:
+          #  - configMapRef:
+          #      name: app-db-env
