@@ -3,7 +3,10 @@
 # $ gcloud iam service-accounts keys create ./private-key.json --iam-account=<EMAIL>
 # $ export GKE_SA_KEY=$(cat private-key.json | base64)
 # $ echo $GKE_SA_KEY
-# $ git clone https://github.com/jylhakos/DevOpsWithKubernetes.git
+# $ kubectl apply -f manifests/persistentvolume.yaml -n <NAMESPACE>
+# $ kubectl apply -f manifests/persistentvolumeclaim.yaml -n <NAMESPACE>
+# $ kubectl apply -f manifests/postgresql.yaml -n <NAMESPACE>
+# $ kubectl apply -f manifests/service-postgresql.yaml -n <NAMESPACE>
 # $ git commit -m "3.04"
 # $ kubectl kustomize build . 
 # $ git branch -m master main
