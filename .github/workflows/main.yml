@@ -1,6 +1,6 @@
 # This is deployment workflow with Github Actions
 
-name: Release branch todos-backend-db
+name: Release branch
 on:
   push:
 env:
@@ -49,4 +49,3 @@ jobs:
         kustomize edit set image gcr.io/PROJECT_ID/IMAGE_FRONTEND=gcr.io/$PROJECT_ID/$IMAGE_FRONTEND:${GITHUB_REF#refs/heads/}-$GITHUB_SHA
         kubectl apply -k .
         kubectl rollout status deployment $IMAGE_FRONTEND
-
