@@ -5,7 +5,7 @@
 # $ echo $GKE_SA_KEY
 # $ git clone https://github.com/jylhakos/DevOpsWithKubernetes.git
 # $ git commit -m "3.04"
-$ kubectl kustomize build ./todo-backend-db/.
+# $ kubectl kustomize build ./todo-backend-db/.
 
 FROM node:alpine
 
