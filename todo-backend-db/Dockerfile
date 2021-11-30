@@ -19,6 +19,7 @@
 # $ git fetch origin
 # $ git merge <BRANCH_NAME>
 # $ git reset --hard origin/main
+# $ git branch --delete <BRANCH_NAME>
 
 FROM node:alpine
 
