@@ -19,6 +19,7 @@ spec:
           #  - configMapRef:
           #      name: app-db-env
         - name: todo-response-db
+          #image: jylhakos/todo-response-db:2.0.9
           image: PROJECT/IMAGE_FRONTEND
           env:
             - name: DB_HOST
