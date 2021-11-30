@@ -38,10 +38,10 @@ jobs:
     - name: Set up Kustomize
       uses: imranismail/setup-kustomize@v1
     - name: List Directory
-      run: ls -l
+      run: ls -l--dry-run
     - name: Deploy
       run: |-
-        kubectl create namespace ${GITHUB_REF#refs/heads/} || true
+        kubectl create namespace ${GITHUB_REF#refs/heads/} --dry-run || true
         kubectl config set-context --current --namespace=${GITHUB_REF#refs/heads/}
         kustomize edit set namespace ${GITHUB_REF#refs/heads/}
         kustomize edit set image gcr.io/PROJECT_ID/IMAGE_BACKEND=gcr.io/$PROJECT_ID/$IMAGE_BACKEND:${GITHUB_REF#refs/heads/}-$GITHUB_SHA
