@@ -8,13 +8,13 @@
 # $ kubectl kustomize build . 
 # $ git branch -m master main
 # $ git push -u origin main
-# $ git switch -c branch_3_04
+# $ git switch -c <BRANCH_NAME>
 # $ git add .
 # $ git commit -m "3.04"
-# $ git push origin branch_3_04
+# $ git push origin <BRANCH_NAME>
 # $ git checkout main
 # $ git fetch origin
-# $ git merge branch_3_04
+# $ git merge <BRANCH_NAME>
 # $ git reset --hard origin/main
 
 FROM node:alpine
